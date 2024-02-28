@@ -4,6 +4,7 @@
  */
 package implementacionbanco;
 
+import Modelo.Cajero;
 import cola.Cola;
 import java.net.URL;
 import java.util.Random;
@@ -19,7 +20,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ProgressIndicator;
 import javafx.scene.web.WebView;
 import modelo.Clientes;
-import modelo.Cajero;
+
 
 /**
  *
@@ -111,7 +112,7 @@ public class FXMLDocumentController implements Initializable {
     private void actualizarCajero(ProgressIndicator timer, Cajero cajero) {
         if (cajero.estaOcupado()) {
             timer.setVisible(true);
-            timer.setProgress(cajero.getTiempoRestante() / cajero.getTiempoTransaccion());
+            timer.setProgress(cajero.getTiempoAcumulado() / cajero.getTiempoTransaccion());
         } else {
             timer.setVisible(false);
         }
