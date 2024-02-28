@@ -10,7 +10,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="443.0" prefWidth="554.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="implementacionbanco.FXMLDocumentController">
     <children>
-        <Button fx:id="button" layoutX="101.0" layoutY="377.0" onAction="#handleButtonAction" text="Click Me!" />
+        <Button fx:id="button" layoutX="101.0" layoutY="377.0" onAction="#handleButtonAction" text="Abrir" />
         <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
       <WebView fx:id="tabla1" layoutX="49.0" layoutY="152.0" prefHeight="200.0" prefWidth="172.0" />
       <Label layoutX="249.0" layoutY="37.0" />

@@ -37,6 +37,9 @@ public class FXMLDocumentController implements Initializable {
     private Cajero cajero6;
     @FXML
     private Label label;
+    
+    @FXML 
+    private WebView tabla11;
     @FXML
     private Button button;
     @FXML
@@ -57,6 +60,8 @@ public class FXMLDocumentController implements Initializable {
     private ProgressIndicator timer5;
     @FXML
     private Button button1;
+    @FXML
+    private Button button2;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -89,7 +94,7 @@ public class FXMLDocumentController implements Initializable {
     private void cerrar(ActionEvent event) {
         simulationTimer.cancel();
     }
-
+    @FXML
    private void ActualizarInterfazGrafica() {
     Platform.runLater(() -> {
         tabla1.getEngine().loadContent(cola.toString());
@@ -102,7 +107,7 @@ public class FXMLDocumentController implements Initializable {
         actualizarCajero(timer6, cajero6);
     });
 }
-
+   @FXML
     private void actualizarCajero(ProgressIndicator timer, Cajero cajero) {
         if (cajero.estaOcupado()) {
             timer.setVisible(true);
@@ -111,7 +116,7 @@ public class FXMLDocumentController implements Initializable {
             timer.setVisible(false);
         }
     }
-
+    @FXML
     private Clientes generarClienteAleatorio() {
         Random random = new Random();
 
